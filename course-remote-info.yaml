@@ -9,7 +9,7 @@ stages:
   is_completed: true
 - id: 229
   step: 5325
-  is_completed: false
+  is_completed: true
 - id: 230
   step: 5326
   is_completed: false
@@ -23,7 +23,7 @@ topics:
   - title: Introduction to OOP
     theory_id: 3614
   - title: IDE
-    theory_id: 3805
+    theory_id: 10996
   - title: Introduction to Java
     theory_id: 3500
   - title: Basic literals

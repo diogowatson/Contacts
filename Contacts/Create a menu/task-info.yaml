@@ -224,12 +224,16 @@ files:
     \        }\n        catch (Exception ex) {\n            return new CheckResult(false,\
     \ \"Can't check the answer\");\n        }\n    }\n}\n"
   learner_created: false
-- name: src/contacts/Person.java
-  visible: true
-  learner_created: true
 - name: src/contacts/Menu.java
   visible: true
   learner_created: true
+- name: src/contacts/Person.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/43/stages/229/implement
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/43/stages/229/implement">JetBrains
+    Academy</a>
+  time: Thu, 08 Oct 2020 13:52:34 UTC
+record: 2

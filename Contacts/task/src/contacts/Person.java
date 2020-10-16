@@ -2,25 +2,19 @@ package contacts;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Person {
+public class Person extends CommonInformation{
     private String name;
     private String surname;
-    private String phoneNumber;
-    private final String phoneNumberRegex = "^(\\d{10})|(([\\(]?([0-9]{3})[\\)]?)?[ \\.\\-]?([0-9]{3})[ \\.\\-]([0-9]{4}))$";
 
 
     public Person(String name, String surname, String phoneNumber) {
         this.name = name;
         this.surname = surname;
-        this.phoneNumber = phoneNumber;
+      //  super.phoneNumber = phoneNumber;
     }
 
     public String getSurname() {
         return surname;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
     }
 
     public String getName() {
@@ -35,15 +29,8 @@ public class Person {
         this.surname = surname;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        Pattern pattern = Pattern.compile(this.phoneNumberRegex);
-        Matcher matcher = pattern.matcher(phoneNumber);
-        if (matcher.matches()) {
-            this.phoneNumber = phoneNumber;
-        }else{
-            System.out.println("Wrong number format!");
-        }
-
+    private boolean hasNumber(String value) {
+        return value.matches(".*\\\\d.*");
     }
 
     @Override
@@ -74,5 +61,6 @@ public class Person {
         public Person build() {
             return new Person(name, surname, phoneNumber);
         }
+
     }
 }
